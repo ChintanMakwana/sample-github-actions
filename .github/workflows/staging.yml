@@ -1,7 +1,7 @@
 on:
  push:
    branches:
-     - main
+     - staging
 name: 🚀 Deploy website on push
 jobs:
  web-deploy:
@@ -20,4 +20,4 @@ jobs:
        username: ${{ secrets.FTP_USERNAME }}
        password: ${{ secrets.FTP_PASSWORD }}
        localPath: './'
-       remotePath: '/var/www/html/test-env2/live/'
+       remotePath: '/var/www/html/test-env2/staging/'
